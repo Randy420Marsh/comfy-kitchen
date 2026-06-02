@@ -93,6 +93,9 @@ python setup.py bdist_wheel --no-cuda
 # Build with custom CUDA architectures
 python setup.py build_ext --cuda-archs="80;89" bdist_wheel
 
+#Corrected order:
+python setup.py bdist_wheel build_ext --cuda-archs="75-virtual"
+
 # Debug build with line info for profiling
 python setup.py build_ext --debug-build --lineinfo bdist_wheel
 ```
